@@ -11,10 +11,10 @@
     <javaModelGenerator targetPackage="com.zs.entity" targetProject="wx/src/main/java" />
     <sqlMapGenerator targetPackage="mapper" targetProject="wx/src/main/resources" />
     <javaClientGenerator targetPackage="com.zs.dao" targetProject="wx/src/main/java" type="XMLMAPPER" />
-    <table tableName="base_user"             
-        enableCountByExample="false"
-        enableDeleteByExample="false"
-        enableSelectByExample="false"
-        enableUpdateByExample="false"/>
+<!--     <table tableName="base_user"  enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+ -->    <table tableName="base_class"  enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+    <table tableName="base_family"  enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+    <table tableName="base_order"  enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+    <table tableName="base_species"  enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>
