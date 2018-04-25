@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+    <plugin type="com.github.dongfg.plugin.LombokPlugin"/>
+    <commentGenerator>  
+        <!-- 是否去除自动生成的注释 true：是 ： false:否 -->  
+        <property name="suppressAllComments" value="true" />  
+    </commentGenerator>  
+    <jdbcConnection connectionURL="jdbc:mysql://localhost/wx-test" driverClass="com.mysql.jdbc.Driver" password="" userId="root" />
+    <javaModelGenerator targetPackage="com.zs.entity" targetProject="wx/src/main/java" />
+    <sqlMapGenerator targetPackage="mapper" targetProject="wx/src/main/resources" />
+    <javaClientGenerator targetPackage="com.zs.dao" targetProject="wx/src/main/java" type="XMLMAPPER" />
+    <table tableName="base_user"             
+        enableCountByExample="false"
+        enableDeleteByExample="false"
+        enableSelectByExample="false"
+        enableUpdateByExample="false"/>
+    </context>
+</generatorConfiguration>
