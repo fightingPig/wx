@@ -29,10 +29,8 @@
         <appender-ref ref ="R"/>  
     </appender>
 
-    <root level="error">
+    <root level="debug">
         <appender-ref ref="STDOUT" />
-        <appender-ref ref="R" />
     </root>
     
-    <logger name="com.zs.controller" level="debug"></logger>
 </configuration>

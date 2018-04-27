@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @version $Revision: 1.0 $, $Date: 2018年4月19日 下午2:36:54 $
  */
 @Controller
-@RequestMapping("main")
-public class Login {
-    private Logger log = LoggerFactory.getLogger(Login.class);
+@RequestMapping("login")
+public class LoginController {
+    private Logger log = LoggerFactory.getLogger(LoginController.class);
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index() {
