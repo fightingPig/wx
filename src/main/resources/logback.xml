@@ -29,8 +29,11 @@
         <appender-ref ref ="R"/>  
     </appender>
 
-    <root level="debug">
+    <root level="error">
         <appender-ref ref="STDOUT" />
     </root>
+    
+    <logger level="debug" name="com.zs.dao"></logger>
+    <logger level="debug" name="com.zs.controller"></logger>
     
 </configuration>

@@ -48,6 +48,7 @@ create table base_family(
     UNIQUE INDEX index_name (name asc)    
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
 -- 种
 create table base_species(
     id              char(36)    	not null,
@@ -66,3 +67,7 @@ create table base_species(
     PRIMARY KEY (id),
     INDEX index_user_id (user_id asc)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ALTER table base_order ADD INDEX index_class_id(class_id asc);
+ALTER table base_family ADD INDEX index_order_id(order_id asc);
+ALTER table base_species ADD INDEX index_family_id(family_id asc);
