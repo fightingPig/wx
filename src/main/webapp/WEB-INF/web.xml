@@ -20,7 +20,17 @@
             <param-name>forceEncoding</param-name>  
             <param-value>true</param-value>  
         </init-param>  
-    </filter>  
+    </filter> 
+    <filter>
+        <filter-name>CookieFilter</filter-name>
+        <filter-class>
+            com.zs.controller.filter.CookieFilter
+        </filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CookieFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping> 
     <filter-mapping>
         <filter-name>testFilter</filter-name>
         <url-pattern>*.do</url-pattern>

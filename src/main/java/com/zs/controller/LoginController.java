@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author zhaosheng
@@ -24,5 +25,13 @@ public class LoginController {
     public String index() {
         log.debug("zzz");
         return "index";
+    }
+
+    @RequestMapping(value = "/index2")
+    public ModelAndView index2() {
+        ModelAndView model = new ModelAndView();
+        log.debug("index2");
+        model.setViewName("index");
+        return model;
     }
 }
