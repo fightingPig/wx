@@ -150,6 +150,13 @@
         <artifactId>mybatis-generator-lombok-plugin</artifactId>
         <version>1.0.0</version>
     </dependency>
+    
+    <!-- 自动化测试 -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-server</artifactId>
+        <version>3.0.1</version>
+    </dependency>
   </dependencies>
   <build>  
     <finalName>wx</finalName>  

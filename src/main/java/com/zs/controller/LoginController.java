@@ -34,4 +34,51 @@ public class LoginController {
         model.setViewName("index");
         return model;
     }
+
+    interface hello {
+        void sayAnything();
+
+        default void sayHello() {
+            System.out.println("default say hello");
+        };
+    }
+
+    public static void say(hello h) {
+    }
+
+    public static void main(String[] args) {
+        hello s = new hello() {
+
+            @Override
+            public void sayAnything() {
+                System.out.println("anything");
+
+            }
+
+        };
+        s.sayAnything();
+        s.sayHello();
+
+        say(new hello() {
+
+            @Override
+            public void sayAnything() {
+                System.out.println("aaaaa");
+            }
+        });
+
+        say(() -> System.out.println("???"));
+
+        new Thread(new Runnable() {
+
+            @Override
+            public void run() {
+                System.out.println("runnable");
+
+            }
+        }).start();
+
+        new Thread(() -> System.out.println("aha ")).start();
+
+    }
 }
